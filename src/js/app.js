@@ -77,11 +77,11 @@ function search(e) {
                         searchRepo.value = '';
 
                         const closeItems = document.getElementsByClassName('close');
-                        const repoList = document.getElementsByClassName('repositores-list');
+                        // const repoList = document.getElementsByClassName('repositores-list');
                         const repoListItem = document.getElementsByClassName('repo-list-item');
                         for (let i = 0; i < repoListItem.length; i++) {
                                 closeItems[i].addEventListener('click', e => {
-                                    repoListItem[i].remove();
+                                    e.target.parentElement.remove();
                                 })
                             }
                         })
